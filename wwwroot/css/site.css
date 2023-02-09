@@ -58,11 +58,11 @@ body {
     width: 70%;
     height: 70%;
 }
-#button {
+.button {
     background-color: #22577A;
     color:white;
     border-radius:5px;
-    height:40px;
+    height:4vw;
     width:14%;
     font-weight:500;
     font-size:20px;
@@ -82,4 +82,60 @@ body {
 .right-star {
     width: 25%;
     
+}
+.choosingUser {
+    column-count: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#textInput {
+    width: 110%;
+    height: 20vh;
+    border-radius: 5px;
+    border-width: 3px;
+    border-color: #22577A;
+}
+#userInput {
+    width: 60%;
+    height: 6vh;
+    border-radius: 5px;
+    border-width:3px;
+    border-color: #22577A;
+}
+.usercloumn {
+    width: 30%;
+    display: flex;
+    
+    align-items: center;
+    
+}
+.textcloumn {
+    width: 70%;
+    
+}
+#blogSubmitButton{
+    margin-top:2vh;
+    align-items:end;
+    float:right;
+}
+.user {
+    margin-right: 10vw;
+    padding:2vw;
+   color:white;
+   border-radius:10px;
+    background-color: #22577A;
+}
+.text {
+    border-radius: 10px;
+    padding: 2vw;
+    margin-right: -200vw;
+    border: 5px solid #22577A;
+    top: 0;
+}
+.blog-section {
+    column-count: 2;
+    display: flex;
+    align-items: start;
+    justify-content: left;
 }
