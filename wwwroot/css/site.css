@@ -16,3 +16,70 @@ html {
 body {
   margin-bottom: 60px;
 }
+.city-container{
+    height:auto;
+    margin-left:-15%;
+    
+}
+.left-container {
+    width: 40%;
+    padding: 10px;
+    float:left;
+    clear:none;
+    text-align:right;
+    vertical-align:auto;
+    
+}
+.right-container {
+    width: 60%;
+    padding: 10px;
+    float:right;
+    clear:none;
+}
+.left-star-container {
+    width: 40%;
+    padding: 10px;
+    text-align: center;
+
+}
+.star-container {
+    height: auto;
+    margin-left: -15%;
+}
+.right-star-container {
+    width: 60%;
+    padding: 10px;
+    float:right;
+
+}
+
+
+#city {
+    width: 70%;
+    height: 70%;
+}
+#button {
+    background-color: #22577A;
+    color:white;
+    border-radius:5px;
+    height:40px;
+    width:14%;
+    font-weight:500;
+    font-size:20px;
+}
+.star-container {
+    display: flex;
+    margin-top: 200px;
+}
+.left-star{
+    width:35%;
+    
+    
+}
+.mid-star{
+    width:25%
+}
+.right-star {
+    width: 25%;
+    
+}
