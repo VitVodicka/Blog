@@ -1,6 +1,7 @@
 ﻿using Blog.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using static System.Formats.Asn1.AsnWriter;
 
 namespace Blog.Controllers
 {
@@ -12,14 +13,30 @@ namespace Blog.Controllers
         {
             _logger = logger;
         }
-
         public IActionResult Index()
         {
+            Score score = new Score();
+            DatabaseComunnication comunnication = new DatabaseComunnication();
+            //transfering 2 classes between normal and HttpPost
+            return View(score);
+        }
+        [HttpPost]
+        public IActionResult Index(Score score)
+        {
+            score.calculateAverage();
             return View();
         }
 
         public IActionResult Blog()
         {
+            //I have to rename class Blog
+            BlogInput blo = new BlogInput();
+            return View(blo);
+        }
+        [HttpPost]
+        public IActionResult Blog(BlogInput blog)
+        {
+            blog.addingToList();
             return View();
         }
 
