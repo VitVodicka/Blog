@@ -26,11 +26,11 @@ namespace Blog.Controllers
             if (ModelState.IsValid)
             {
                 score.calculateAverage();
-                return View();
+                return View(score);
             }
             else
             {
-                return View();
+                return View(score);
             }
             
             

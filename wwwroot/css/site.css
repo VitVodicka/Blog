@@ -36,22 +36,6 @@ body {
     float:right;
     clear:none;
 }
-.left-star-container {
-    width: 40%;
-    padding: 10px;
-    text-align: center;
-
-}
-.star-container {
-    height: auto;
-    margin-left: -15%;
-}
-.right-star-container {
-    width: 60%;
-    padding: 10px;
-    float:right;
-
-}
 
 
 #city {
@@ -60,12 +44,25 @@ body {
 }
 .button {
     background-color: #22577A;
-    color:white;
-    border-radius:5px;
-    height:4vw;
-    width:14%;
-    font-weight:500;
-    font-size:20px;
+    color: white;
+    border-radius: 5px;
+    width: 170px;
+    height: 45px;
+    min-width: 170px;
+    min-height: 45px;
+    font-weight: 500;
+    font-size: 20px;
+}
+.newbutton {
+    background-color: #22577A;
+    color: white;
+    border-radius: 5px;
+    width: 200px;
+    height: 50px;
+    min-width: 20px;
+    min-height: 50px;
+    font-weight: 500;
+    font-size: 20px;
 }
 .star-container {
     display: flex;
@@ -76,8 +73,24 @@ body {
     
     
 }
-.mid-star{
-    width:25%
+.new{
+    position:fixed;
+    bottom:0;
+    text-align:center;
+    display:inline-block;
+    margin-bottom:8vw;
+}
+#inputIndex {
+    margin-right: 3vw;
+    margin-left:80px;
+}
+#labelIndex {
+    padding-right:100px;
+    font-size:30px;
+    font-weight:500;
+}
+.mid-star {
+    width: 25%
 }
 .right-star {
     width: 25%;
@@ -106,7 +119,7 @@ body {
 .usercloumn {
     width: 30%;
     display: flex;
-    
+    margin-bottom:50px;
     align-items: center;
     
 }
@@ -121,9 +134,11 @@ body {
 }
 .user {
     margin-right: 10vw;
-    padding:2vw;
-   color:white;
-   border-radius:10px;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    padding: 2vw;
+    color: white;
+    border-radius: 10px;
     background-color: #22577A;
 }
 .text {
@@ -132,6 +147,8 @@ body {
     margin-right: -200vw;
     border: 5px solid #22577A;
     top: 0;
+    margin-top:2vw;
+    margin-bottom:2vw;
 }
 .blog-section {
     column-count: 2;

@@ -28,18 +28,12 @@
     </div>
     
 </div>
-    <div class="star-container">
-        <div class="left-star">
-          
-        </div>
+    
+    <div class="new">
         <form method="post">
-        <div class="mid-star">
-            <input type="text" id="starInput" name="Prumer" value="@Model.Prumer" />
-
-        </div>
-        <div class="right-star">
-            <button type="submit" value="submit"  class="button">SEND </button>
-        </div>
+            <label id="labelIndex"> @Model.Prumer</label>
+            <input type="text" id="inputIndex" name="Prumer" value="@Model.Prumer"></input>
+        <button class="button" type="submit" value="submit">SEND</button>
         </form>
     </div>
 

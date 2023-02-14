@@ -10,8 +10,11 @@
             User column input
         -->
         <div class="usercolumn">
-            <h1>User</h1>
                 <input type="text" id="userInput" name="UserName" value="@Model.UserName" />
+                <h3>User</h3>
+                
+            
+               
                 
             
             
@@ -30,7 +33,7 @@
     </div>
     </div>
     </form>
-    
+    <!-- generating users according to the list-->
     @foreach(User user in BlogInput.users){
     <div>
             <div class="blog-section">
