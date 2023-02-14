@@ -2,12 +2,13 @@
 {
     public class BlogInput
     {
-        List<User> users { get; set; }
+        public List<User> users { get; set; }
         public string UserName { get; set; }
         public string UserText { get; set; }
 
         public BlogInput()
         {
+            
             users = new List<User>();
         }
         public void addingToList()

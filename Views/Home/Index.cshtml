@@ -1,7 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
+@model Blog.Models.Score;
 <body>
 <div class="city-container">
     <div class="left-container">
@@ -30,7 +30,7 @@
 </div>
     <div class="star-container">
         <div class="left-star">
-            <h1 id="=cislo">cislo</h1>
+            <h1 id="=cislo" >@Model.Prumer</h1>
         </div>
         <div class="mid-¨star">
             <svg width="400" height="110">

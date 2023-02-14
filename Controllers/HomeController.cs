@@ -16,7 +16,7 @@ namespace Blog.Controllers
         public IActionResult Index()
         {
             Score score = new Score();
-            DatabaseComunnication comunnication = new DatabaseComunnication();
+            //DatabaseComunnication comunnication = new DatabaseComunnication();
             //transfering 2 classes between normal and HttpPost
             return View(score);
         }
@@ -29,18 +29,27 @@ namespace Blog.Controllers
 
         public IActionResult Blog()
         {
-            //I have to rename class Blog
-            BlogInput blo = new BlogInput();
-            return View(blo);
-        }
-        [HttpPost]
-        public IActionResult Blog(BlogInput blog)
-        {
-            blog.addingToList();
-            return View();
+            BlogInput blogInput = new BlogInput();
+            return View(blogInput);
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        [HttpPost]
+        public IActionResult Blog(BlogInput model)
+        {
+            if (ModelState.IsValid)
+            {
+                model.addingToList();
+                return View(model);
+            }
+            else
+            {
+                // Model is not valid, so redisplay the form with validation errors
+                return View(model);
+            }
+        }
+       
+
+                [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });

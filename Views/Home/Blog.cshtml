@@ -2,27 +2,38 @@
 @{
     ViewData["Title"] = "Blog";
 }
+@model Blog.Models.BlogInput;
 <body>
+    <form method="post">
     <div class="choosingUser">
         <!--
             User column input
         -->
         <div class="usercolumn">
             <h1>User</h1>
-            <input type="text" id="userInput" name="userInput" />
-            
+                <input type="text" id="userInput" name="UserName" value="@Model.UserName" />
+                
             
             
         </div>
     
     <div class="textcloumn">
-            <input type="text" name="textInput" id="textInput" />
+
+                <input type="text" name="UserText" id="textInput" value="@Model.UserText" />
+                
+                
             <button type="submit" value="submit" id="blogSubmitButton" class="button">SEND</button>
+            
         <!--   Text column input
         -->
         
     </div>
     </div>
+    </form>
+    
+    <h1>@Model.UserText</h1>
+    <h1>@Model.UserName</h1>
+
     <div>
         <div class="blog-section">
         <label class="user">Userdfskdfsdfsk</label>
