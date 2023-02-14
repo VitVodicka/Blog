@@ -31,15 +31,15 @@
     </div>
     </form>
     
-    <h1>@Model.UserText</h1>
-    <h1>@Model.UserName</h1>
-
+    @foreach(User user in BlogInput.users){
     <div>
-        <div class="blog-section">
-        <label class="user">Userdfskdfsdfsk</label>
-            <label class="text">User text</label>
+            <div class="blog-section">
+                <label class="user">@user.UserName</label>
+                <label class="text">@user.UserText</label>
+            </div>
         </div>
-    </div>
+    }
+    
 </body>
 <!--
 

@@ -30,17 +30,17 @@
 </div>
     <div class="star-container">
         <div class="left-star">
-            <h1 id="=cislo" >@Model.Prumer</h1>
+          
         </div>
-        <div class="mid-¨star">
-            <svg width="400" height="110">
-                <rect width="300" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
-            </svg>
+        <form method="post">
+        <div class="mid-star">
+            <input type="text" id="starInput" name="Prumer" value="@Model.Prumer" />
 
         </div>
         <div class="right-star">
-            <button type="button" class="button">SEND </button>
+            <button type="submit" value="submit"  class="button">SEND </button>
         </div>
+        </form>
     </div>
 
 </body>

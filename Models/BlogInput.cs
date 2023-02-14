@@ -2,19 +2,20 @@
 {
     public class BlogInput
     {
-        public List<User> users { get; set; }
+        public static List<User> users { get; set; }= new List<User>();
+        
         public string UserName { get; set; }
         public string UserText { get; set; }
 
         public BlogInput()
         {
             
-            users = new List<User>();
+            
         }
-        public void addingToList()
+        public  void addingToList()
         {
             User u = new User(UserName, UserText);
-            users.Add(u);
+            BlogInput.users.Add(u);
         }
 
     }

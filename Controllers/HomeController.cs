@@ -23,8 +23,17 @@ namespace Blog.Controllers
         [HttpPost]
         public IActionResult Index(Score score)
         {
-            score.calculateAverage();
-            return View();
+            if (ModelState.IsValid)
+            {
+                score.calculateAverage();
+                return View();
+            }
+            else
+            {
+                return View();
+            }
+            
+            
         }
 
         public IActionResult Blog()
