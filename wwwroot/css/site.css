@@ -109,8 +109,9 @@ body {
     border-width: 3px;
     border-color: #22577A;
 }
-.hvezdicka{
-    font-size:100px;
+.hvezdicka {
+    font-size: 100px;
+    
 }
     .hvezdicka:hover {
         color: #22577A;
