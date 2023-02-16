@@ -16,6 +16,16 @@ function counting() {
         appear();
     }
 }
+function mouseover(let star) {
+    document.getElementById(star).innerHTML = "★";
+}
+function mouseout(let star) {
+    document.getElementById(star).innerHTML = "☆";
+}
+function eventListener(let star) {
+    star.addEventListener('mouseover', mouseover);
+    star.addEventListener('mouseout', mouseout);
+}
 
 let javascriptbutton = document.getElementById("javascriptbutton");
 javascriptbutton.addEventListener('click', counting);
@@ -23,6 +33,17 @@ javascriptbutton.addEventListener('click', counting);
 let hideoutButton = document.getElementById("hideoutbutton");
 hideoutButton.addEventListener('click', disapear);
 disapear();
+
+let star1 = document.getElementById("hvezdicka1");
+let star2 = document.getElementById("hvezdicka2");
+let star3 = document.getElementById("hvezdicka3");
+let star4 = document.getElementById("hvezdicka4");
+let star5 = document.getElementById("hvezdicka5");
+eventListener(star1);
+eventListener(star2);
+eventListener(star3);
+eventListener(star4);
+eventListener(star5);
 
 
 

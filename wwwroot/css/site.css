@@ -109,11 +109,17 @@ body {
     border-width: 3px;
     border-color: #22577A;
 }
+.hvezdicka{
+    font-size:100px;
+}
+    .hvezdicka:hover {
+        color: #22577A;
+    }
 #userInput {
     width: 60%;
     height: 6vh;
     border-radius: 5px;
-    border-width:3px;
+    border-width: 3px;
     border-color: #22577A;
 }
 .usercloumn {
