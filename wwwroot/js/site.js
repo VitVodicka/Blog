@@ -2,6 +2,11 @@
 
     constructor() {
         this.positionOfStars = 0;
+        this.starNumber = 0;
+        
+    }
+    sendToAverage() {
+
     }
     mouseover(starNumber) {
 
@@ -123,6 +128,7 @@
                     star4.style.color = "black";
                     star5.style.color = "black";
                     this.positionOfStars = 1;
+                    this.starNumber = 1;
 
                     break;
                 case 2:
@@ -138,6 +144,7 @@
                     star4.style.color = "black";
                     star5.style.color = "black";
                     this.positionOfStars = 2;
+                    this.starNumber = 2;
 
                     break;
                 case 3:
@@ -154,6 +161,7 @@
                     star4.style.color = "black";
                     star5.style.color = "black";
                     this.positionOfStars = 3;
+                    this.starNumber = 3;
 
 
                     break;
@@ -170,6 +178,7 @@
                     star5.innerHTML = "☆";
                     star5.style.color = "black";
                     this.positionOfStars = 4;
+                    this.starNumber = 4;
 
                     break;
                 case 5:
@@ -184,6 +193,7 @@
                     star4.style.color = "#22577A";
                     star5.style.color = "#22577A";
                     this.positionOfStars = 5;
+                    this.starNumber = 5;
                     break;
             }
         }
@@ -271,8 +281,12 @@ let javascriptButton = document.getElementById("javascriptbutton");
 javascriptButton.addEventListener('click', appear.counting);
 
 let hideoutButton = document.getElementById("hideoutbutton");
-hideoutButton.addEventListener('click', appear.disappear);
+hideoutButton.addEventListener('click', function ())
 appear.disappear();
+appear.sendToAverage();
+            });
+
+
 
 let star1 = document.getElementById("hvezdicka1");
 let star2 = document.getElementById("hvezdicka2");
@@ -280,3 +294,4 @@ let star3 = document.getElementById("hvezdicka3");
 let star4 = document.getElementById("hvezdicka4");
 let star5 = document.getElementById("hvezdicka5");
 star.eventListener(star1, star2, star3, star4, star5);
+
