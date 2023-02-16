@@ -1,14 +1,15 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
-let numberOfClicks = 0;
-function disapear() {
+﻿let numberOfClicks = 0;
+
+function disappear() {
     let starview = document.getElementById("starreview");
     starview.style.visibility = "hidden";
 }
+
 function appear() {
     let starview = document.getElementById("starreview");
     starview.style.visibility = "visible";
 }
+
 function counting() {
     numberOfClicks++;
     if (numberOfClicks == 3) {
@@ -16,34 +17,42 @@ function counting() {
         appear();
     }
 }
-function mouseover(let star) {
-    document.getElementById(star).innerHTML = "★";
-}
-function mouseout(let star) {
-    document.getElementById(star).innerHTML = "☆";
-}
-function eventListener(let star) {
-    star.addEventListener('mouseover', mouseover);
-    star.addEventListener('mouseout', mouseout);
+
+function mouseover(star) {
+    star.innerHTML = "★";
 }
 
-let javascriptbutton = document.getElementById("javascriptbutton");
-javascriptbutton.addEventListener('click', counting);
+function mouseout(star) {
+    star.innerHTML = "☆";
+}
+
+function eventListener(star) {
+    star.addEventListener('mouseover', function () {
+        mouseover(star);
+    });
+    star.addEventListener('mouseout', function () {
+        mouseout(star);
+    });
+    
+}
+
+let javascriptButton = document.getElementById("javascriptbutton");
+javascriptButton.addEventListener('click', counting);
 
 let hideoutButton = document.getElementById("hideoutbutton");
-hideoutButton.addEventListener('click', disapear);
-disapear();
+hideoutButton.addEventListener('click', disappear);
+disappear();
+
+
 
 let star1 = document.getElementById("hvezdicka1");
 let star2 = document.getElementById("hvezdicka2");
 let star3 = document.getElementById("hvezdicka3");
 let star4 = document.getElementById("hvezdicka4");
 let star5 = document.getElementById("hvezdicka5");
+
 eventListener(star1);
 eventListener(star2);
 eventListener(star3);
 eventListener(star4);
 eventListener(star5);
-
-
-
