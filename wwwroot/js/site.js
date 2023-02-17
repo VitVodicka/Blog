@@ -16,9 +16,9 @@ function counting() {
         numberOfClicks = 0;
         appear();
     }
-}*/
+}
 
-/*function mouseover(starNumber) {
+function mouseover(starNumber) {
 
     switch (starNumber) {
         case 1:
@@ -65,23 +65,64 @@ function counting() {
 
     }
 
-}
+}*/
 
-/*function mouseout() {
-    star1.innerHTML = "☆";
-    star2.innerHTML = "☆";
-    star3.innerHTML = "☆";
-    star4.innerHTML = "☆";
-    star5.innerHTML = "☆";
+function mouseout() {
+    if (positionOfStars == 0) {
 
-    star1.style.color = "black";
-    star2.style.color = "black";
-    star3.style.color = "black";
-    star4.style.color = "black";
-    star5.style.color = "black";
 
-}
-let positionOfStar = 0;*/
+        star1.innerHTML = "☆";
+        star2.innerHTML = "☆";
+        star3.innerHTML = "☆";
+        star4.innerHTML = "☆";
+        star5.innerHTML = "☆";
+
+        star1.style.color = "black";
+        star2.style.color = "black";
+        star3.style.color = "black";
+        star4.style.color = "black";
+        star5.style.color = "black";
+    }
+    else {
+        switch (positionOfStars) {
+            case 1:
+                star2.innerHTML = "☆";
+                star3.innerHTML = "☆";
+                star4.innerHTML = "☆";
+                star5.innerHTML = "☆";
+
+                star2.style.color = "black";
+                star3.style.color = "black";
+                star4.style.color = "black";
+                star5.style.color = "black";
+                break;
+            case 2:
+                star3.innerHTML = "☆";
+                star4.innerHTML = "☆";
+                star5.innerHTML = "☆";
+                star3.style.color = "black";
+                star4.style.color = "black";
+                star5.style.color = "black";
+                break;
+            case 3:
+                star4.innerHTML = "☆";
+                star5.innerHTML = "☆";
+                star4.style.color = "black";
+                star5.style.color = "black";
+                break;
+            case 4:
+                star5.innerHTML = "☆";
+                star5.style.color = "black";
+                break;
+            case 5:
+                break;
+
+        }
+
+    }
+};
+
+let positionOfStar = 0;
 function selectedStars(starNumber) {
     switch (starNumber) {
         case 1:
@@ -183,9 +224,9 @@ function eventListener(star1, star2, star3, star4, star5) {
     });
     star5.addEventListener('mouseover', function () {
         mouseover(5);
-    });*/
-
-    /*star1.addEventListener('mouseout', function () {
+    });
+    */
+    star1.addEventListener('mouseout', function () {
         mouseout();
     });
     star2.addEventListener('mouseout', function () {
@@ -199,7 +240,7 @@ function eventListener(star1, star2, star3, star4, star5) {
     });
     star5.addEventListener('mouseout', function () {
         mouseout();
-    });*/
+    });
     star1.addEventListener('click', function () {
         selectedStars(1);
     });
