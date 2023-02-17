@@ -16,7 +16,7 @@ function counting() {
         numberOfClicks = 0;
         appear();
     }
-}
+}*/
 
 function mouseover(starNumber) {
 
@@ -65,7 +65,7 @@ function mouseover(starNumber) {
 
     }
 
-}*/
+}
 
 function mouseout() {
     if (positionOfStars == 0) {
@@ -210,7 +210,7 @@ function selectedStars(starNumber) {
 };
 
 function eventListener(star1, star2, star3, star4, star5) {
-    /*star1.addEventListener('mouseover', function () {
+    star1.addEventListener('mouseover', function () {
         mouseover(1);
     });
     star2.addEventListener('mouseover', function () {
@@ -225,7 +225,7 @@ function eventListener(star1, star2, star3, star4, star5) {
     star5.addEventListener('mouseover', function () {
         mouseover(5);
     });
-    */
+    
     star1.addEventListener('mouseout', function () {
         mouseout();
     });
