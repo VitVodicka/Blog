@@ -1,6 +1,6 @@
 ﻿let numberOfClicks = 0;
 
-/*function disappear() {
+function disappear() {
     let starview = document.getElementById("starreview");
     starview.style.visibility = "hidden";
 }
@@ -16,7 +16,7 @@ function counting() {
         numberOfClicks = 0;
         appear();
     }
-}*/
+}
 
 function mouseover(starNumber) {
 
@@ -265,11 +265,11 @@ function eventListener(star1, star2, star3, star4, star5) {
 
 let hideoutButton = document.getElementById("hideoutbutton");
 hideoutButton.addEventListener('click', function () {
-    // disappear();
+     disappear();
     sendToAverage();
 
 });
-//disappear();
+disappear();
 let star1 = document.getElementById("hvezdicka1");
 let star2 = document.getElementById("hvezdicka2");
 let star3 = document.getElementById("hvezdicka3");
