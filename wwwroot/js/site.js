@@ -239,7 +239,10 @@ function eventListener(star1, star2, star3, star4, star5) {
         selectedStars(5);
     });
 
-}
+};
+function sendToAverage() {
+    alert(positionOfStars);
+};
 
 let javascriptButton = document.getElementById("javascriptbutton");
 javascriptButton.addEventListener('click', function () {

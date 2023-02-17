@@ -27,19 +27,22 @@
     
     <div class="new" id="starreview"> 
         <form method="post">
-            <label id="labelIndex"> @Model.Prumer</label>
-            <input type="text" id="inputIndex" name="Prumer" value="@Model.Prumer"/>
-        <button class="button" type="submit" id="hideoutbutton" value="submit" >SEND</button>
+
+            @*<span id="labelIndex"> @Model.Prumer</span>*@
+            @*<input type="text" id="inputIndex" name="Prumer" value="@Model.Prumer"/>*@
+            <div>
+                <label id="labelIndex"> @Model.Prumer</label>
+                <span class="hvezdicka" id="hvezdicka1">☆</span>
+                <span class="hvezdicka" id="hvezdicka2">☆</span>
+                <span class="hvezdicka" id="hvezdicka3">☆</span>
+                <span class="hvezdicka" id="hvezdicka4">☆</span>
+                <span class="hvezdicka" id="hvezdicka5">☆</span>
+                <button class="button" type="submit" id="hideoutbutton" value="submit">SEND</button>
+            </div>
+            @*<button class="button" type="submit" id="hideoutbutton" value="submit" >SEND</button>*@
         </form>
     </div>
-    <div>
-        
-        <span class="hvezdicka" id="hvezdicka1">☆</span>
-        <span class="hvezdicka" id="hvezdicka2">☆</span>
-        <span class="hvezdicka" id="hvezdicka3">☆</span>
-        <span class="hvezdicka" id="hvezdicka4">☆</span>
-        <span class="hvezdicka" id="hvezdicka5">☆</span>
-    </div>
+    
     <script src="~/js/site.js"> </script>
 
 </body>
