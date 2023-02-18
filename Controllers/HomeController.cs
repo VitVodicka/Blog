@@ -25,21 +25,21 @@ namespace Blog.Controllers
         {
             if (ModelState.IsValid)
             {
-                score.calculateAverage();
+                score.PrumerEquals();
                 return View(score);
+
             }
             else
             {
                 return View(score);
             }
-            
-            
+
+
         }
         [HttpPost]
         public IActionResult javascrpitTransfer([FromBody] Score score)
         {
             score.calculateAverage();
-            
             return Ok(score);
         }
 

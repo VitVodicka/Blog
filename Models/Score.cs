@@ -11,22 +11,34 @@ namespace Blog.Models
         
         public Score() {
            
-            Prumer = 0;
+            
             
             
         }
         public void calculateAverage()
         {
-            
             poradi++;
-            Cislo = (Cislo+Prumer)/poradi;
-            Cislo=Math.Round(Cislo,2);
+            if (poradi == 1)
+            {
+                Cislo = (Cislo + Prumer);
+                Cislo = Math.Round(Cislo, 2);
+            }
+            else
+            {
+                Cislo = (Cislo + Prumer) / 2;
+                Cislo = Math.Round(Cislo, 2);
+            }
+            
 
-            Prumer = Cislo;
+            
             
             
         
 
+        }
+        public void PrumerEquals()
+        {
+            Prumer = Cislo;
         }
     }
 }

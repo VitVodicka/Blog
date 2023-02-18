@@ -264,8 +264,15 @@ javascriptButton.addEventListener('click', function () {
 
 let hideoutButton = document.getElementById("hideoutbutton");
 hideoutButton.addEventListener('click', function () {
-     disappear();
-    sendToAverage();
+    if (positionOfStars > 0) {
+
+
+        disappear();
+        sendToAverage();
+    }
+    else {
+        alert("Not chosen a star");
+    }
 
 });
 disappear();
@@ -280,6 +287,7 @@ eventListener(star1, star2, star3, star4, star5);
 let numberOfClicks = 0;
 
 function disappear() {
+    
     let starview = document.getElementById("starreview");
     starview.style.visibility = "hidden";
 }
