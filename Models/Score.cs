@@ -5,9 +5,9 @@ namespace Blog.Models
     public class Score
     {
 
-        private static double Cislo = 0;
+        public static double Cislo = 0;
         public double Prumer { get; set; }
-        private static double poradi = 0;
+        public static double poradi = 0;
         
         public Score() {
            
@@ -27,13 +27,7 @@ namespace Blog.Models
             {
                 Cislo = (Cislo + Prumer) / 2;
                 Cislo = Math.Round(Cislo, 2);
-            }
-            
-
-            
-            
-            
-        
+            }  
 
         }
         public void PrumerEquals()

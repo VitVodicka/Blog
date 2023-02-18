@@ -1,5 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    double CisloFirst = Blog.Models.Score.Cislo;
 }
 @model Blog.Models.Score;
 <body>
@@ -31,7 +32,14 @@
             @*<span id="labelIndex"> @Model.Prumer</span>*@
             @*<input type="text" id="inputIndex" name="Prumer" value="@Model.Prumer"/>*@
             <div>
-                <label id="labelIndex"> @Model.Prumer</label>
+                @if (Blog.Models.Score.poradi == 1)
+                {
+                    <label id="labelIndex"> @CisloFirst</label>
+                }
+                else
+                {
+                    <label id="labelIndex"> @Model.Prumer</label>
+                    }
                 <span class="hvezdicka" id="hvezdicka1">☆</span>
                 <span class="hvezdicka" id="hvezdicka2">☆</span>
                 <span class="hvezdicka" id="hvezdicka3">☆</span>
