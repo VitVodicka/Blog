@@ -35,6 +35,13 @@ namespace Blog.Controllers
             
             
         }
+        [HttpPost]
+        public IActionResult javascrpitTransfer([FromBody] Score score)
+        {
+            score.calculateAverage();
+            
+            return Ok(score);
+        }
 
         public IActionResult Blog()
         {

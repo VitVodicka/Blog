@@ -241,7 +241,20 @@ function eventListener(star1, star2, star3, star4, star5) {
 
 };
 function sendToAverage() {
-    alert(positionOfStars);
+    var data = { Prumer: positionOfStars }
+    $.ajax({
+        url: 'home/javascrpitTransfer',
+        type: 'POST',
+        data: JSON.stringify(data),
+        contentType: 'application/json',
+        success: function (result) {
+            
+        },
+        error: function (error) {
+            alert("failure");
+        }
+    });
+    
 };
 
 let javascriptButton = document.getElementById("javascriptbutton");
