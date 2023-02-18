@@ -31,7 +31,7 @@
 
             @*<span id="labelIndex"> @Model.Prumer</span>*@
             @*<input type="text" id="inputIndex" name="Prumer" value="@Model.Prumer"/>*@
-            <div>
+            <div class="moving">
                 @if (Blog.Models.Score.poradi == 1)
                 {
                     <label id="labelIndex"> @CisloFirst</label>
@@ -40,11 +40,13 @@
                 {
                     <label id="labelIndex"> @Model.Prumer</label>
                     }
+                
                 <span class="hvezdicka" id="hvezdicka1">☆</span>
                 <span class="hvezdicka" id="hvezdicka2">☆</span>
                 <span class="hvezdicka" id="hvezdicka3">☆</span>
                 <span class="hvezdicka" id="hvezdicka4">☆</span>
                 <span class="hvezdicka" id="hvezdicka5">☆</span>
+                
                 <button class="button" type="submit" id="hideoutbutton" value="submit">SEND</button>
             </div>
             @*<button class="button" type="submit" id="hideoutbutton" value="submit" >SEND</button>*@
