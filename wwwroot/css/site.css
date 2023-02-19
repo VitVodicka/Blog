@@ -119,6 +119,7 @@ body {
 #textInput {
     width: 110%;
     height: 20vh;
+    font-size:30px;
     border-radius: 5px;
     border-width: 3px;
     border-color: #22577A;
@@ -140,6 +141,7 @@ body {
 }
 .textcloumn {
     width: 70%;
+    padding-top:50px;
     
 }
 #blogSubmitButton{
@@ -147,27 +149,43 @@ body {
     align-items:end;
     float:right;
 }
-.user {
-    margin-right: 10vw;
-    margin-top: 2vw;
-    margin-bottom: 2vw;
-    padding: 2vw;
-    color: white;
-    border-radius: 10px;
-    background-color: #22577A;
-}
-.text {
-    border-radius: 10px;
-    padding: 2vw;
-    margin-right: -200vw;
-    border: 5px solid #22577A;
-    top: 0;
-    margin-top:2vw;
-    margin-bottom:2vw;
-}
+
 .blog-section {
     column-count: 2;
     display: flex;
     align-items: start;
     justify-content: left;
+    margin-right: 20%;
+    margin-left: -5%;
+    margin-top:80px;
+}
+.text-container {
+    max-width: 35vw; /* set a maximum width for the container */
+    width:200%;
+}
+
+.long-text {
+    word-wrap: break-word; /* break words that exceed the container width */
+    white-space: pre-line; /* preserve line breaks and wrap long lines */
+    border-radius: 10px;
+    border: 5px solid #22577A;
+    padding: 2vw;
+    margin-top: 2vw;
+    width: 200%;
+    font-size:18px;
+}
+
+.user-container {
+    width: 20%;
+}
+.user-text {
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: #22577A;
+    width: 80%;
+    text-align: center;
+    color: white;
+    padding: 2vw;
+    margin-top: 2vw;
+    font-size: 18px;
 }
