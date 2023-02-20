@@ -1,4 +1,5 @@
 ﻿//star functions
+/*
 function mouseover(starNumber) {
 
     switch (starNumber) {
@@ -304,12 +305,15 @@ function counting() {
         appear();
     }
 }
+*/
 
-/*var closeBtns = document.getElementsByClassName("closeButton");
-closeBtns.addEventListener('click', function (){
-    var itemNum = this.getAttribute("data-item");
-    alert("Clicked close button for item " + itemNum);
-});*/
+var closeButton = document.querySelector('.closeButton');
+    closeButton.addEventListener('click', function () {
+        var itemNum = this.getAttribute("data-item");
+        alert(itemNum);
+    });
+
+  
 
 /*closeBtns.forEach(function (btn) {
     btn.addEventListener("click", function () {

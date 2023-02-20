@@ -35,7 +35,7 @@
             
             <div class="blog-section" >
                 <div class="closeContainer">
-                <p class="closeButton" data-item=@postNumber.ToString()>&times;</p>
+                <button class="closeButton" data-item=@postNumber.ToString()>X</button>
             </div>
                 <div class="user-container">
                 <label class="user-text">@user.UserName</label>
@@ -50,7 +50,9 @@
         </div>
         postNumber++;
     }
+    <script src="~/js/site.js">
     
+</script>
 </body>
 <!--
 
