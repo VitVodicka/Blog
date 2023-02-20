@@ -1,6 +1,7 @@
 ﻿
 @{
     ViewData["Title"] = "Blog";
+    int postNumber = 0;
 }
 @model Blog.Models.BlogInput;
 <body>
@@ -31,15 +32,23 @@
     <!-- generating users according to the list-->
     @foreach(User user in BlogInput.users){
     <div >
-            <div class="blog-section">
+            
+            <div class="blog-section" >
+                <div class="closeContainer">
+                <p class="closeButton" data-item=@postNumber.ToString()>&times;</p>
+            </div>
                 <div class="user-container">
                 <label class="user-text">@user.UserName</label>
                 </div>
                 <div class="text-container">
+                    
                     <p class="long-text">@user.UserText</p>
+                    
                 </div>
+                
             </div>
         </div>
+        postNumber++;
     }
     
 </body>
