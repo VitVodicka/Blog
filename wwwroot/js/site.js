@@ -309,25 +309,28 @@ function counting() {
 let numberInput = 3;
 let ListElementButton = [];
 let ListElementSection = [];
-for (let i = 0; i < numberInput; i++) {
-    if (ListElementButton != i.toString()) {
-        ListElementButton.push(i.toString());
+let k = 0;
+let buttonId = k.toString();
+let sectionId = 'section' + k.toString();
+
+for (k; k < numberInput; k++) {
+    if (!ListElementButton.includes(buttonId)) {
+        ListElementButton.push(buttonId);
     }
-    if (ListElementSection != ('section' + i.toString())) {
-        ListElementSection.push('section' + i.toString());
+    if (!ListElementSection.includes(sectionId)) {
+        ListElementSection.push(sectionId);
     }
 }
 
 for (let i = 0; i < ListElementButton.length; i++) {
     var close = document.getElementById(ListElementButton[i]);
     var section = document.getElementById(ListElementSection[i]);
-    //recognizing();
-
-
+    recognizing(close,section); // call the recognizing function here
 }
 
 
-function recognizing() {
+function recognizing(close, section) {
+    alert("ahoj");
     close.addEventListener('click', function () {
         section.remove();
 
