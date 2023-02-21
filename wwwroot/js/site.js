@@ -306,29 +306,32 @@ function counting() {
     }
 }
 */
+let numberInput = 3;
+let ListElementButton = [];
+let ListElementSection = [];
+for (let i = 0; i < numberInput; i++) {
+    if (ListElementButton != i.toString()) {
+        ListElementButton.push(i.toString());
+    }
+    if (ListElementSection != ('section' + i.toString())) {
+        ListElementSection.push('section' + i.toString());
+    }
+}
 
-    var section = document.getElementById("section2");
-    var close = document.getElementById("2");
+for (let i = 0; i < ListElementButton.length; i++) {
+    var close = document.getElementById(ListElementButton[i]);
+    var section = document.getElementById(ListElementSection[i]);
+    //recognizing();
 
 
-    function recognizing() {
+}
+
+
+function recognizing() {
     close.addEventListener('click', function () {
         section.remove();
-        
+
     });
 
 }
-recognizing();
 
-/*var close = document.document.querySelector("[data-item*=2]");
-close.addEventListener('click', function () {
-    var itemNum = this.getAttribute("data-item");
-    alert(itemNum);
-});*/
-  
-
-/*closeBtns.forEach(function (btn) {
-    btn.addEventListener("click", function () {
-        var itemNum = this.getAttribute("data-item");
-        alert("Clicked close button for item " + itemNum);
-    });*/
