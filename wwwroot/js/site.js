@@ -307,11 +307,16 @@ function counting() {
 }
 */
 
-var closeButton = document.querySelector('.closeButton');
-    closeButton.addEventListener('click', function () {
-        var itemNum = this.getAttribute("data-item");
-        alert(itemNum);
+var close = document.getElementById("4");
+    close.addEventListener('click', function () {
+        
+        alert(4);
     });
+/*var close = document.document.querySelector("[data-item*=2]");
+close.addEventListener('click', function () {
+    var itemNum = this.getAttribute("data-item");
+    alert(itemNum);
+});*/
 
   
 
