@@ -102,7 +102,7 @@ function mouseout() {
         }
 
     }
-};
+}
 
 let positionOfStars = 0;
 function selectedStars(starNumber) {
@@ -189,7 +189,7 @@ function selectedStars(starNumber) {
             starNumber = 5;
             break;
     }
-};
+}
 //event listeners and recognizers
 function eventListener(star1, star2, star3, star4, star5) {
     star1.addEventListener('mouseover', function () {
@@ -240,7 +240,7 @@ function eventListener(star1, star2, star3, star4, star5) {
         selectedStars(5);
     });
 
-};
+}
 function sendToAverage() {
     var data = { Prumer: positionOfStars }
     $.ajax({
@@ -256,7 +256,7 @@ function sendToAverage() {
         }
     });
     
-};
+}
 
 let javascriptButton = document.getElementById("javascriptbutton");
 javascriptButton.addEventListener('click', function () {
@@ -307,17 +307,24 @@ function counting() {
 }
 */
 
-var close = document.getElementById("4");
+    var section = document.getElementById("section2");
+    var close = document.getElementById("2");
+
+
+    function recognizing() {
     close.addEventListener('click', function () {
+        section.remove();
         
-        alert(4);
     });
+
+}
+recognizing();
+
 /*var close = document.document.querySelector("[data-item*=2]");
 close.addEventListener('click', function () {
     var itemNum = this.getAttribute("data-item");
     alert(itemNum);
 });*/
-
   
 
 /*closeBtns.forEach(function (btn) {

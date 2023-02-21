@@ -2,6 +2,7 @@
 @{
     ViewData["Title"] = "Blog";
     int postNumber = 0;
+    string sectionId = "";
 }
 @model Blog.Models.BlogInput;
 <body>
@@ -31,7 +32,8 @@
     
     <!-- generating users according to the list-->
     @foreach(User user in BlogInput.users){
-    <div >
+        sectionId = "section" + postNumber.ToString();
+        <div id="@sectionId">
             
             <div class="blog-section" >
                 <div class="closeContainer">
