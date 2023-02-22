@@ -1,6 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
     double CisloFirst = Blog.Models.Score.Cislo;
+     <!--  it is only used if the first input number of the review -->
 }
 @model Blog.Models.Score;
 <body>
@@ -25,13 +26,13 @@
     </div>
     
 </div>
-    
+     <!-- Review of the site -->
     <div class="new" id="starreview"> 
         <form method="post">
 
-            @*<span id="labelIndex"> @Model.Prumer</span>*@
-            @*<input type="text" id="inputIndex" name="Prumer" value="@Model.Prumer"/>*@
+            
             <div class="moving">
+                <!-- if it is the first input from User than labelIndex sets to the CisloFirst -->
                 @if (Blog.Models.Score.poradi == 1)
                 {
                     <label id="labelIndex"> @CisloFirst</label>
@@ -49,11 +50,10 @@
                 
                 <button class="button" type="submit" id="hideoutbutton" value="submit">SEND</button>
             </div>
-            @*<button class="button" type="submit" id="hideoutbutton" value="submit" >SEND</button>*@
         </form>
     </div>
     
-    <script src="~/js/site.js"> </script>
+    <script src="~/js/JSsite.js"> </script>
 
 </body>
 

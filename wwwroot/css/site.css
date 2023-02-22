@@ -88,10 +88,7 @@ body {
     position: relative;
     margin:10px;
     flex-wrap:wrap;
-    cursor:pointer;
 }
-
-
 
 
 .hvezdicka:hover {
@@ -122,6 +119,7 @@ body {
 #textInput {
     width: 110%;
     height: 20vh;
+    font-size:30px;
     border-radius: 5px;
     border-width: 3px;
     border-color: #22577A;
@@ -143,6 +141,7 @@ body {
 }
 .textcloumn {
     width: 70%;
+    padding-top:50px;
     
 }
 #blogSubmitButton{
@@ -150,37 +149,19 @@ body {
     align-items:end;
     float:right;
 }
-.user {
-    margin-right: 10vw;
-    margin-top: 2vw;
-    margin-bottom: 2vw;
-    padding: 2vw;
-    color: white;
-    border-radius: 10px;
-    background-color: #22577A;
-}
-.text {
-    border-radius: 10px;
-    padding: 2vw;
-    margin-right: -200vw;
-    border: 5px solid #22577A;
-    top: 0;
-    margin-top:2vw;
-    margin-bottom:2vw;
-}
+
 .blog-section {
-    column-count: 3;
+    column-count: 2;
     display: flex;
     align-items: start;
     justify-content: left;
-<<<<<<< HEAD
     margin-right: 20%;
     margin-left: -5%;
     margin-top:80px;
 }
 .text-container {
     max-width: 35vw; /* set a maximum width for the container */
-    width:190%;
+    width:200%;
 }
 
 .long-text {
@@ -207,24 +188,4 @@ body {
     padding: 2vw;
     margin-top: 2vw;
     font-size: 18px;
-=======
->>>>>>> parent of f82d936 (Blog design, UX done)
 }
-.closeButton {
-    cursor: pointer;
-    background: red;
-    border-radius:10px;
-    text-align:center;
-    font-size:1.15vw;
-    padding: 2vw;
-    margin-top: 2vw;
-    color:white;
-    font-weight:700;
-}
-.closeContainer{
-    width:5%;
-    margin-right:2vw;
-}
-    .closeButton:hover {
-        background: #bbb;
-    }

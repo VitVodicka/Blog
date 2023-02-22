@@ -1,76 +1,40 @@
-﻿
-@{
+﻿@{
+    // title of the web page
     ViewData["Title"] = "Blog";
-    int postNumber = 0;
-    string sectionId = "";
 }
-@model Blog.Models.BlogInput;
-<body>
-    <form method="post">
-    <div class="choosingUser">
-        <!--
-            User column input
-        -->
-        <div class="usercolumn">
-                <input type="text" id="userInput" name="UserName" value="@Model.UserName" />
-                <h3>User</h3>
-                
-            
-               
-                
-            
-            
-        </div>
-    
-    <div class="textcloumn">
 
-                <input type="text" name="UserText" id="textInput" value="@Model.UserText" />
-                
-                
-            <button type="submit" value="submit" id="blogSubmitButton" class="button">SEND</button>
-            
-        <!--   Text column input
-        -->
-        
-    </div>
-    </div>
-    </form>
-    <!-- generating users according to the list-->
-    @foreach(User user in BlogInput.users){
-<<<<<<< HEAD
-        sectionId = "section" + postNumber.ToString();
-        <div id="@sectionId">
-            
-            <div class="blog-section" >
-                <div class="closeContainer">
-                    <!--  <button class="closeButton" data-item=@postNumber.ToString()>X</button>-->
-                    <button class="closeButton" id="@postNumber.ToString()">X</button>
+@model Blog.Models.BlogInput;
+
+<body>
+    <!--  form for submitting a new blog post -->
+    <form method="post">
+        <div class="choosingUser">
+            <!-- User input column -->
+            <div class="usercolumn">
+                <input type="text" id="userInput" maxlength="15" name="UserName" value="@Model.UserName" />
+                <h3>User</h3>
             </div>
+
+            <!-- Text input column -->
+            <div class="textcloumn">
+                <input type="text" name="UserText" id="textInput" value="@Model.UserText" />
+                <button type="submit" value="submit" id="blogSubmitButton" class="button">SEND</button>
+            </div>
+        </div>
+    </form>
+
+    <!-- Loop over existing blog posts and generate a list of them -->
+    @foreach (User user in BlogInput.users)
+    {
+        <div>
+            <div class="blog-section">
                 <div class="user-container">
-                <label class="user-text">@user.UserName</label>
+                    <label class="user-text">@user.UserName</label>
                 </div>
                 <div class="text-container">
-                    
                     <p class="long-text">@user.UserText</p>
-                    
                 </div>
-                
-=======
-    <div>
-            <div class="blog-section">
-                <label class="user">@user.UserName</label>
-                <label class="text">@user.UserText</label>
->>>>>>> parent of f82d936 (Blog design, UX done)
             </div>
         </div>
-        postNumber++;
     }
-    <script src="~/js/site.js">
-    
-</script>
 </body>
-<!--
-
-
-
---->

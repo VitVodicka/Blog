@@ -3,7 +3,7 @@ namespace Blog.Models
 
 {
     public class DatabaseComunnication
-    {
+    {//in setup
         SqlConnection connection;
         SqlCommand command;
         SqlDataReader datareader;

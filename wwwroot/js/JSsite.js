@@ -1,6 +1,5 @@
 ﻿//star functions
-/*
-function mouseover(starNumber) {
+function mouseover(starNumber) {//hovers over stars and fills them according to the number of hovered stars
 
     switch (starNumber) {
         case 1:
@@ -49,7 +48,7 @@ function mouseover(starNumber) {
 
 }
 
-function mouseout() {
+function mouseout() {//if user hovers out of stars, according to the selected stars other stars change color to the black and the stars are empty
     if (positionOfStars == 0) {
 
 
@@ -102,11 +101,12 @@ function mouseout() {
         }
 
     }
-}
+};
 
-let positionOfStars = 0;
+let positionOfStars = 0;//  keeps track of how many stars the user has selected (0-5)
 function selectedStars(starNumber) {
     switch (starNumber) {
+         // If the user selects 1,2,3,4 stars, mark it as selected and unmark the others
         case 1:
             star1.innerHTML = "★";
             star1.style.color = "#22577A";
@@ -189,8 +189,8 @@ function selectedStars(starNumber) {
             starNumber = 5;
             break;
     }
-}
-//event listeners and recognizers
+};
+//event listeners and recognizers of how hovering over stars, hovering out of stars and if users selects star
 function eventListener(star1, star2, star3, star4, star5) {
     star1.addEventListener('mouseover', function () {
         mouseover(1);
@@ -207,7 +207,7 @@ function eventListener(star1, star2, star3, star4, star5) {
     star5.addEventListener('mouseover', function () {
         mouseover(5);
     });
-    
+
     star1.addEventListener('mouseout', function () {
         mouseout();
     });
@@ -240,7 +240,8 @@ function eventListener(star1, star2, star3, star4, star5) {
         selectedStars(5);
     });
 
-}
+};
+//sends to controller->Model to variable Prumer 
 function sendToAverage() {
     var data = { Prumer: positionOfStars }
     $.ajax({
@@ -249,14 +250,14 @@ function sendToAverage() {
         data: JSON.stringify(data),
         contentType: 'application/json',
         success: function (result) {
-            
+
         },
         error: function (error) {
             alert("failure");
         }
     });
-    
-}
+
+};
 
 let javascriptButton = document.getElementById("javascriptbutton");
 javascriptButton.addEventListener('click', function () {
@@ -288,7 +289,7 @@ eventListener(star1, star2, star3, star4, star5);
 let numberOfClicks = 0;
 
 function disappear() {
-    
+
     let starview = document.getElementById("starreview");
     starview.style.visibility = "hidden";
 }
@@ -298,42 +299,10 @@ function appear() {
     starview.style.visibility = "visible";
 }
 
-function counting() {
+function counting() {//if user clicks 3 times on the button the review part appears
     numberOfClicks++;
     if (numberOfClicks == 3) {
         numberOfClicks = 0;
         appear();
     }
 }
-*/
-let numberInput = 3;
-let ListElementButton = [];
-let ListElementSection = [];
-let k = 0;
-let buttonId = k.toString();
-let sectionId = 'section' + k.toString();
-
-for (k; k < numberInput; k++) {
-    if (!ListElementButton.includes(buttonId)) {
-        ListElementButton.push(buttonId);
-    }
-    if (!ListElementSection.includes(sectionId)) {
-        ListElementSection.push(sectionId);
-    }
-}
-
-for (let i = 0; i < ListElementButton.length; i++) {
-    var close = document.getElementById(ListElementButton[i]);
-    var section = document.getElementById(ListElementSection[i]);
-    recognizing(close,section); // call the recognizing function here
-}
-
-
-function recognizing(close, section) {
-    close.addEventListener('click', function () {
-        section.remove();
-
-    });
-
-}
-
