@@ -330,7 +330,6 @@ for (let i = 0; i < ListElementButton.length; i++) {
 
 
 function recognizing(close, section) {
-    alert("ahoj");
     close.addEventListener('click', function () {
         section.remove();
 

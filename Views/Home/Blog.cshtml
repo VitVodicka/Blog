@@ -12,8 +12,14 @@
             User column input
         -->
         <div class="usercolumn">
-                <input type="text" id="userInput" maxlength="15" name="UserName" value="@Model.UserName" />
-                <h3>User</h3>     
+                <input type="text" id="userInput" name="UserName" value="@Model.UserName" />
+                <h3>User</h3>
+                
+            
+               
+                
+            
+            
         </div>
     
     <div class="textcloumn">
@@ -29,9 +35,9 @@
     </div>
     </div>
     </form>
-    
     <!-- generating users according to the list-->
     @foreach(User user in BlogInput.users){
+<<<<<<< HEAD
         sectionId = "section" + postNumber.ToString();
         <div id="@sectionId">
             
@@ -49,6 +55,12 @@
                     
                 </div>
                 
+=======
+    <div>
+            <div class="blog-section">
+                <label class="user">@user.UserName</label>
+                <label class="text">@user.UserText</label>
+>>>>>>> parent of f82d936 (Blog design, UX done)
             </div>
         </div>
         postNumber++;
