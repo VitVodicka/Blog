@@ -241,6 +241,20 @@ function eventListener(star1, star2, star3, star4, star5) {
     });
 
 };
+/*
+function delete (){
+    $.ajax(){
+        url: 'home/delete',
+        type: 'POST',
+        success: function(resault) {
+
+        },
+        Error:
+        {
+            alert("Can t remove");
+        }
+    } later
+}*/
 //sends to controller->Model to variable Prumer 
 function sendToAverage() {
     var data = { Prumer: positionOfStars }

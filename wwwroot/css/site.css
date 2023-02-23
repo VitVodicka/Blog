@@ -189,3 +189,16 @@ body {
     margin-top: 2vw;
     font-size: 18px;
 }
+/* later
+#delete {
+    color: white;
+    border-radius: 5px;
+    height: 45px;
+    min-width: 50px;
+    min-height: 45px;
+    font-weight: 500;
+    font-size: 20px;
+    background-color: darkred;
+    width: 50px;
+    margin-top: 1vw;
+}*/

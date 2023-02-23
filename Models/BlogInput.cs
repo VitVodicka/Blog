@@ -14,6 +14,11 @@ namespace Blog.Models
         {
 
         }
+        /* later
+        public void removeList()
+        {
+            users.Clear();
+        }*/
 
         // method to add the current user to the list of users
         public void addingToList()

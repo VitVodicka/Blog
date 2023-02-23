@@ -16,6 +16,11 @@ namespace Blog.Controllers
         public IActionResult Index()
         {
             Score score = new Score();
+            Files f = new Files();
+            f.WrittingFile(6);
+            double r=f.ReadingFile();
+            Console.WriteLine(r);
+
             //DatabaseComunnication comunnication = new DatabaseComunnication();
             //transfering 2 classes between normal and HttpPost
             return View(score);
@@ -42,6 +47,13 @@ namespace Blog.Controllers
             score.calculateAverage();
             return Ok(score);
         }
+        /* later
+        [HttpPost]
+        public IActionResult delete(BlogInput blog)
+        {
+            blog.removeList();
+            return Ok(blog);
+        }*/
 
         public IActionResult Blog()
         {
