@@ -12,9 +12,9 @@ namespace Blog.Models
 
            
             doc.Load("average.xml");
-            XmlElement root = doc.DocumentElement;
+            XmlElement root = doc.DocumentElement;//declaring root 
             double averageRet = 0;
-            foreach (XmlNode node in root.ChildNodes)
+            foreach (XmlNode node in root.ChildNodes)//going throught node by node in root
             {
                 if (node != null)
                 {
@@ -26,7 +26,7 @@ namespace Blog.Models
             catch(Exception e)
             {
                 Console.WriteLine(e.Message);
-                return 0;
+                return -1;
             }
             
 
@@ -36,13 +36,19 @@ namespace Blog.Models
             doc= new XmlDocument();
         }
         public void WrittingFile(double averageValue) {
+            try
+            {
+
+            
             XmlElement root = doc.CreateElement("Score");
-            doc.AppendChild(root);
+            doc.AppendChild(root);//declares element called root and appends it to the document
 
             XmlElement average = doc.CreateElement("average");
-            average.InnerText = averageValue.ToString();
+            average.InnerText = averageValue.ToString();//declares node average and adds a value to it
             root.AppendChild(average);
-            doc.Save("average.xml");
+            doc.Save("average.xml");//appends node average under root and saves it
+            }
+            catch(Exception e) { Console.WriteLine(e.Message);}
         }
     }
 }

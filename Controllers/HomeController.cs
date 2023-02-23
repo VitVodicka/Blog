@@ -16,10 +16,7 @@ namespace Blog.Controllers
         public IActionResult Index()
         {
             Score score = new Score();
-            Files f = new Files();
-            f.WrittingFile(6);
-            double r=f.ReadingFile();
-            Console.WriteLine(r);
+            
 
             //DatabaseComunnication comunnication = new DatabaseComunnication();
             //transfering 2 classes between normal and HttpPost
@@ -45,6 +42,7 @@ namespace Blog.Controllers
         public IActionResult javascrpitTransfer([FromBody] Score score)
         {
             score.calculateAverage();
+            score.PrumerEquals();
             return Ok(score);
         }
         /* later

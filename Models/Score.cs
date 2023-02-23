@@ -20,20 +20,22 @@ namespace Blog.Models
 
         //calculates the average score
         public void calculateAverage()
-        {
+        {   Files file = new Files();
             poradi++;
 
             // If this is the first score, add it to the cumulative sum and round to 2 decimal places
             if (poradi == 1)
             {
-                Cislo = (Cislo + Prumer);
+                Cislo = (file.ReadingFile() + Prumer);
                 Cislo = Math.Round(Cislo, 2);
+                file.WrittingFile(Cislo);
             }
             // Otherwise, add the current score to the cumulative sum, divide by 2 to get the average, and round to 2 decimal places
             else
             {
-                Cislo = (Cislo + Prumer) / 2;
+                Cislo = (file.ReadingFile() + Prumer) / 2;
                 Cislo = Math.Round(Cislo, 2);
+                file.WrittingFile(Cislo);
             }
         }
 
