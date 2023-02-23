@@ -18,8 +18,7 @@ namespace Blog.Models
             {
                 if (node != null)
                 {
-                    XmlNode average = node.SelectSingleNode("average");
-                    averageRet = double.Parse(average.InnerText);
+                    averageRet = double.Parse(node.InnerText);
                 }
             }
             return averageRet;
