@@ -18,7 +18,8 @@ namespace Blog.Controllers
             Score score = new Score();
 
 
-            //DatabaseComunnication comunnication = new DatabaseComunnication();
+            DatabaseComunnication comunnication = new DatabaseComunnication();
+            comunnication.DataBaseConnection();
             //transfering 2 classes between normal and HttpPost
             return View(score);
         }
