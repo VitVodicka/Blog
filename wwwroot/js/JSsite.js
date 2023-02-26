@@ -291,6 +291,7 @@ hideoutButton.addEventListener('click', function () {
     }
 
 });
+sendToAverage(0);
 disappear();
 let star1 = document.getElementById("hvezdicka1");
 let star2 = document.getElementById("hvezdicka2");

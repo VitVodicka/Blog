@@ -16,7 +16,7 @@ namespace Blog.Controllers
         public IActionResult Index()
         {
             Score score = new Score();
-            
+
 
             //DatabaseComunnication comunnication = new DatabaseComunnication();
             //transfering 2 classes between normal and HttpPost
@@ -27,7 +27,7 @@ namespace Blog.Controllers
         {
             if (ModelState.IsValid)
             {
-                //score.PrumerEquals();
+                
                 return View(score);
 
             }
@@ -42,16 +42,10 @@ namespace Blog.Controllers
         public IActionResult javascrpitTransfer([FromBody] Score score)
         {
             score.calculateAverage();
-            //score.PrumerEquals();
+            
             return Ok(score);
         }
-        /* later
-        [HttpPost]
-        public IActionResult delete(BlogInput blog)
-        {
-            blog.removeList();
-            return Ok(blog);
-        }*/
+       
 
         public IActionResult Blog()
         {
@@ -73,9 +67,9 @@ namespace Blog.Controllers
                 return View(model);
             }
         }
-       
 
-                [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
