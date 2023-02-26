@@ -1,5 +1,7 @@
 ﻿using System.Data.SqlClient;
 namespace Blog.Models
+    //INSERT INTO BlogInput([User],Text) VALUES('jan','toto je text');
+    //SELECT * FROM BlogInput;
 
 {
     public class DatabaseComunnication

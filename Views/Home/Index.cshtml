@@ -33,14 +33,9 @@
             
             <div class="moving">
                 <!-- if it is the first input from User than labelIndex sets to the CisloFirst -->
-                @if (Blog.Models.Score.poradi == 1)
-                {
-                    <label id="labelIndex"> @CisloFirst</label>
-                }
-                else
-                {
-                    <label id="labelIndex"> @Model.Prumer</label>
-                    }
+                
+                <label id="labelIndex"> @Model.Prumer</label>
+                    
                 
                 <span class="hvezdicka" id="hvezdicka1">☆</span>
                 <span class="hvezdicka" id="hvezdicka2">☆</span>

@@ -27,7 +27,7 @@ namespace Blog.Controllers
         {
             if (ModelState.IsValid)
             {
-                score.PrumerEquals();
+                //score.PrumerEquals();
                 return View(score);
 
             }
@@ -42,7 +42,7 @@ namespace Blog.Controllers
         public IActionResult javascrpitTransfer([FromBody] Score score)
         {
             score.calculateAverage();
-            score.PrumerEquals();
+            //score.PrumerEquals();
             return Ok(score);
         }
         /* later
