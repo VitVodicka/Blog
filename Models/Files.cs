@@ -5,8 +5,6 @@ namespace Blog.Models
     public class Files
     {
         
-        
-
 
         public double ReadingFile()
         {

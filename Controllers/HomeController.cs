@@ -16,12 +16,6 @@ namespace Blog.Controllers
         public IActionResult Index()
         {
             Score score = new Score();
-
-
-            DatabaseComunnication comunnication = new DatabaseComunnication();
-            comunnication.databaseReader();
-            comunnication.databaseWriter("vit", "this is the content");
-            comunnication.databaseReader();
             //transfering 2 classes between normal and HttpPost
             return View(score);
         }
@@ -53,6 +47,7 @@ namespace Blog.Controllers
         public IActionResult Blog()
         {
             BlogInput blogInput = new BlogInput();
+            blogInput.readingFromList();//reads data from database
             return View(blogInput);
         }
 
