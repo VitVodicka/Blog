@@ -19,7 +19,9 @@ namespace Blog.Controllers
 
 
             DatabaseComunnication comunnication = new DatabaseComunnication();
-            comunnication.DataBaseConnection();
+            comunnication.databaseReader();
+            comunnication.databaseWriter("vit", "this is the content");
+            comunnication.databaseReader();
             //transfering 2 classes between normal and HttpPost
             return View(score);
         }
