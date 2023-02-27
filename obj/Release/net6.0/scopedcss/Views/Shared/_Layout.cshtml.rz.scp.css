@@ -1,4 +1,4 @@
-/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+/* Please see documentation at https://docs.microsoft.m/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
 a.navbar-brand[b-9b4f8crvh3] {
@@ -9,6 +9,9 @@ a.navbar-brand[b-9b4f8crvh3] {
 
 a[b-9b4f8crvh3] {
   color: #0077cc;
+}
+.position[b-9b4f8crvh3]{
+    justify-content:flex-start;
 }
 
 .btn-primary[b-9b4f8crvh3] {
@@ -46,9 +49,11 @@ button.accept-policy[b-9b4f8crvh3] {
   white-space: nowrap;
   line-height: 60px;
 }
+
 #logo[b-9b4f8crvh3]{
     width:10%;
     height:10%;
 
 }
+
 

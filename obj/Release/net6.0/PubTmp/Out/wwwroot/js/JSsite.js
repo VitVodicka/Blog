@@ -1,4 +1,5 @@
-﻿//star functions
+﻿
+//star functions
 function mouseover(starNumber) {//hovers over stars and fills them according to the number of hovered stars
 
     switch (starNumber) {
@@ -241,6 +242,7 @@ function eventListener(star1, star2, star3, star4, star5) {
     });
 
 };
+
 //sends to controller->Model to variable Prumer 
 function sendToAverage() {
     var data = { Prumer: positionOfStars }
@@ -277,6 +279,7 @@ hideoutButton.addEventListener('click', function () {
     }
 
 });
+sendToAverage(0);
 disappear();
 let star1 = document.getElementById("hvezdicka1");
 let star2 = document.getElementById("hvezdicka2");
