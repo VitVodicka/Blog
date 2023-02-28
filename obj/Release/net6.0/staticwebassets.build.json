@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1sUYALsl7OcFH267Vvo+OrHH6EwRXFXPWUlVak3vm3w=",
+  "Hash": "nZORw4uLPMBhKEn5LKP4358PSuWqc1HnjvS+e7HWq8o=",
   "Source": "Blog",
   "BasePath": "_content/Blog",
   "Mode": "Default",
@@ -85,12 +85,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\drako\\source\\repos\\Blog\\Blog\\wwwroot\\js\\JSsite.js",
+      "Identity": "C:\\Users\\drako\\source\\repos\\Blog\\Blog\\wwwroot\\js\\JSNEW.js",
       "SourceId": "Blog",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\drako\\source\\repos\\Blog\\Blog\\wwwroot\\",
       "BasePath": "_content/Blog",
-      "RelativePath": "js/JSsite.js",
+      "RelativePath": "js/JSNEW.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -99,7 +99,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\JSsite.js"
+      "OriginalItemSpec": "wwwroot\\js\\JSNEW.js"
     },
     {
       "Identity": "C:\\Users\\drako\\source\\repos\\Blog\\Blog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

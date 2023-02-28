@@ -5,7 +5,7 @@ namespace Blog.Models
     public class Score
     {
 
-        // tatic field to store the cumulative sum of scores
+        // static field to store the cumulative sum of scores
         public static double Cislo { get; set; }
 
         public double Prumer { get; set; }

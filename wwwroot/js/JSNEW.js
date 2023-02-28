@@ -107,7 +107,7 @@ function mouseout() {//if user hovers out of stars, according to the selected st
 let positionOfStars = 0;//  keeps track of how many stars the user has selected (0-5)
 function selectedStars(starNumber) {
     switch (starNumber) {
-         // If the user selects 1,2,3,4 stars, mark it as selected and unmark the others
+        // If the user selects 1,2,3,4 stars, mark it as selected and unmark the others
         case 1:
             star1.innerHTML = "★";
             star1.style.color = "#22577A";
@@ -279,7 +279,6 @@ hideoutButton.addEventListener('click', function () {
     }
 
 });
-sendToAverage(0);
 disappear();
 let star1 = document.getElementById("hvezdicka1");
 let star2 = document.getElementById("hvezdicka2");
